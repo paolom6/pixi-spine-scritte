@@ -1,2 +1,2 @@
-# pixi-spine-scritte
+# pixi-spine
 Created with CodeSandbox
