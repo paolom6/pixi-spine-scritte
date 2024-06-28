@@ -36,8 +36,6 @@ PIXI.Assets.load(directory).then((resource) => {
     document.addEventListener("keydown", function (event) {
       if (event.key == "ArrowLeft" && animation > 0) {
         animation = animation - 1;
-        console.clear();
-        console.log(array[animation]);
         text.text =
           array[animation] +
           " velocità: " +
