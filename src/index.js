@@ -2,12 +2,12 @@ import "./styles.css";
 import * as PIXI from "pixi.js";
 import { Spine } from "pixi-spine";
 const fs = require("fs");
-var files = fs.readdirSync("/assets/dragon");
+var files = fs.readdirSync("/assets/");
 var path = require("path");
 
 for (var i in files) {
   if (path.extname(files[i]) === ".json") {
-    var directory = "assets/dragon/" + files[i];
+    var directory = "assets/" + files[i];
     break;
   }
 }
@@ -36,6 +36,8 @@ PIXI.Assets.load(directory).then((resource) => {
     document.addEventListener("keydown", function (event) {
       if (event.key == "ArrowLeft" && animation > 0) {
         animation = animation - 1;
+        console.clear();
+        console.log(array[animation]);
         text.text =
           array[animation] +
           " velocità: " +
